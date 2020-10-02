@@ -1,0 +1,29 @@
+{
+  "name": "graphql-swr-cache-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "graphql-request": "^3.1.0",
+    "nodemon": "^2.0.4",
+    "stale-lru-cache": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.5",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "babel-watch": "^7.0.0"
+  },
+  "scripts": {
+    "dev": "babel-watch ./src/index.js",
+    "build": "rm -r -f ./dist && babel src -d dist --copy-files",
+    "start": "nodemon ./dist/index.js"
+  },
+  "author": "the_fukui",
+  "license": "ISC"
+}
